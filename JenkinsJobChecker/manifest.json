@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Jenkins Job Checker",
+  "version": "1.0",
+  "description": "Monitors Jenkins jobs and shows finished/in-progress jobs triggered by the connected user.\n\nMaintained by Kobi G. Credits: Thanks to the Jenkins community and open-source contributors.",
+  "author": "Kobi G",
+  "homepage_url": "https://github.com/kobi86",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Jenkins Job Checker"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

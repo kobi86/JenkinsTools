@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jenkins Job Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 320px;
+      margin: 0;
+      padding: 10px;
+    }
+    input, select, button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    #status {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      overflow: auto;
+      max-height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Jenkins Job Checker</h2>
+  
+  <label for="jenkinsUrl">Jenkins URL:</label>
+  <input type="text" id="jenkinsUrl" placeholder="https://jenkins.example.com">
+  
+  <label for="timeFrame">Time Frame (hours):</label>
+  <select id="timeFrame">
+    <option value="1">1 hour</option>
+    <option value="2">2 hours</option>
+    <option value="12">12 hours</option>
+    <option value="24">24 hours</option>
+  </select>
+  
+  <label for="sortOrder">Sort Order (by start time):</label>
+  <select id="sortOrder">
+    <option value="asc">Oldest to Newest</option>
+    <option value="desc">Newest to Oldest</option>
+  </select>
+  
+  <button id="saveBtn">Save Settings</button>
+  <button id="fetchBtn">Fetch Jenkins Data</button>
+  <button id="openFullPageBtn">Open Full Page View</button>
+  
+  <div id="status"></div>
+  <pre id="results"></pre>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
